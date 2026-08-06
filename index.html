@@ -4,798 +4,1160 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>LENSORA | Premium Camera Store</title>
+    <title>LENSWEB - Camera Store</title>
 
+    <!-- CSS -->
     <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
 
-    <!-- ================= NAVBAR ================= -->
-    <header class="navbar">
+    <!-- =========================
+         HALAMAN PILIH ROLE
+    ========================== -->
+    <section id="rolePage" class="page active">
 
-        <a href="#" class="logo">
-            LENS<span>ORA</span>
-        </a>
+        <div class="role-container">
 
-        <nav class="nav-menu">
-            <a href="#home">Home</a>
-            <a href="#products">Camera</a>
-            <a href="#categories">Categories</a>
-            <a href="#about">About</a>
-        </nav>
+            <div class="logo">
+                LENS<span>WEB</span>
+            </div>
 
-        <div class="nav-actions">
+            <h1>Selamat Datang</h1>
 
-            <button class="icon-btn" id="searchBtn" title="Search">
-                🔍
-            </button>
+            <p>Pilih jenis akun untuk melanjutkan</p>
 
-            <button class="icon-btn" id="wishlistBtn" title="Wishlist">
-                ♡
-            </button>
+            <div class="role-buttons">
 
-            <button class="cart-btn" id="cartBtn">
-                🛒
-                <span id="cartCount">0</span>
-            </button>
+                <button id="customerRoleBtn" class="role-btn">
+                    <span>👤</span>
+                    <strong>Customer</strong>
+                    <small>Belanja kamera</small>
+                </button>
 
-            <button class="login-btn" id="loginBtn">
-                Login
-            </button>
+                <button id="adminRoleBtn" class="role-btn">
+                    <span>🛠️</span>
+                    <strong>Admin</strong>
+                    <small>Kelola toko</small>
+                </button>
+
+            </div>
 
         </div>
 
-    </header>
+    </section>
 
 
-    <!-- ================= SEARCH BOX ================= -->
-    <div class="search-box" id="searchBox">
+    <!-- =========================
+         LOGIN ADMIN
+    ========================== -->
+    <section id="adminLoginPage" class="page">
 
-        <input
-            type="text"
-            id="searchInput"
-            placeholder="Cari kamera, lensa, atau brand..."
-        >
+        <div class="login-container">
 
-        <button id="closeSearch">
-            ✕
-        </button>
+            <button id="backFromAdminBtn" class="back-btn">
+                ← Kembali
+            </button>
 
-    </div>
-
-
-    <!-- ================= MAIN ================= -->
-    <main>
-
-
-        <!-- ================= HERO ================= -->
-        <section class="hero" id="home">
-
-            <div class="hero-content">
-
-                <p class="eyebrow">
-                    PREMIUM CAMERA STORE
-                </p>
-
-                <h1>
-                    Capture Your
-                    <span>Best Moment.</span>
-                </h1>
-
-                <p class="hero-description">
-                    Temukan kamera premium pilihan untuk fotografi,
-                    videografi, content creation, dan perjalananmu.
-                </p>
-
-                <div class="hero-buttons">
-
-                    <a href="#products" class="btn-primary">
-                        Explore Cameras →
-                    </a>
-
-                    <a href="#categories" class="btn-outline">
-                        Browse Categories
-                    </a>
-
-                </div>
-
-                <div class="hero-info">
-
-                    <div>
-                        <strong>100+</strong>
-                        <span>Products</span>
-                    </div>
-
-                    <div>
-                        <strong>20+</strong>
-                        <span>Brands</span>
-                    </div>
-
-                    <div>
-                        <strong>4.9/5</strong>
-                        <span>Rating</span>
-                    </div>
-
-                </div>
-
+            <div class="logo">
+                LENS<span>WEB</span>
             </div>
 
+            <h2>Login Admin</h2>
 
-            <div class="hero-visual">
+            <p>Masuk untuk mengelola toko</p>
 
-                <div class="gold-circle"></div>
+            <form id="adminLoginForm">
 
-                <div class="hero-camera-card">
-
-                    <span class="hero-badge">
-                        NEW ARRIVAL
-                    </span>
-
-                    <div class="camera-placeholder">
-                        📷
-                    </div>
-
-                    <div class="hero-product-info">
-
-                        <div>
-                            <small>SONY</small>
-                            <h3>Alpha A7 IV</h3>
-                        </div>
-
-                        <strong>
-                            Rp 32.999.000
-                        </strong>
-
-                    </div>
-
+                <div class="input-group">
+                    <label>Username</label>
+                    <input
+                        type="text"
+                        id="adminUsername"
+                        placeholder="Masukkan username"
+                        required
+                    >
                 </div>
 
-            </div>
-
-        </section>
-
-
-        <!-- ================= BRAND BAR ================= -->
-        <section class="brand-bar">
-
-            <p>TRUSTED BRANDS</p>
-
-            <div class="brand-list">
-
-                <span>SONY</span>
-                <span>CANON</span>
-                <span>NIKON</span>
-                <span>FUJIFILM</span>
-                <span>LEICA</span>
-
-            </div>
-
-        </section>
-
-
-        <!-- ================= CATEGORIES ================= -->
-        <section class="categories section" id="categories">
-
-            <div class="section-heading">
-
-                <div>
-                    <p class="eyebrow">
-                        SHOP BY CATEGORY
-                    </p>
-
-                    <h2>
-                        Find Your Gear
-                    </h2>
+                <div class="input-group">
+                    <label>Password</label>
+                    <input
+                        type="password"
+                        id="adminPassword"
+                        placeholder="Masukkan password"
+                        required
+                    >
                 </div>
 
-                <a href="#products">
-                    View All →
-                </a>
-
-            </div>
-
-
-            <div class="category-grid">
-
-
-                <button class="category-card" data-category="Mirrorless">
-
-                    <div class="category-icon">
-                        📷
-                    </div>
-
-                    <div>
-                        <h3>Mirrorless</h3>
-                        <p>Modern & lightweight</p>
-                    </div>
-
-                    <span>→</span>
-
+                <button type="submit" class="main-btn">
+                    Login Admin
                 </button>
 
+                <p id="adminLoginMessage" class="message"></p>
 
-                <button class="category-card" data-category="DSLR">
+            </form>
 
-                    <div class="category-icon">
-                        📸
-                    </div>
+        </div>
 
-                    <div>
-                        <h3>DSLR</h3>
-                        <p>Professional camera</p>
-                    </div>
-
-                    <span>→</span>
-
-                </button>
+    </section>
 
 
-                <button class="category-card" data-category="Lens">
+    <!-- =========================
+         HOME CUSTOMER
+    ========================== -->
+    <section id="homePage" class="page">
 
-                    <div class="category-icon">
-                        🔭
-                    </div>
+        <!-- NAVBAR -->
+        <header class="navbar">
 
-                    <div>
-                        <h3>Lenses</h3>
-                        <p>Sharp & detailed</p>
-                    </div>
-
-                    <span>→</span>
-
-                </button>
-
-
-                <button class="category-card" data-category="Accessories">
-
-                    <div class="category-icon">
-                        🎒
-                    </div>
-
-                    <div>
-                        <h3>Accessories</h3>
-                        <p>Complete your setup</p>
-                    </div>
-
-                    <span>→</span>
-
-                </button>
-
+            <div class="logo">
+                LENS<span>WEB</span>
             </div>
 
-        </section>
-
-
-        <!-- ================= PRODUCTS ================= -->
-        <section class="products section" id="products">
-
-            <div class="section-heading">
-
-                <div>
-
-                    <p class="eyebrow">
-                        OUR COLLECTION
-                    </p>
-
-                    <h2>
-                        Featured Cameras
-                    </h2>
-
-                </div>
-
-                <button class="view-all-btn" id="viewAllBtn">
-                    View All →
-                </button>
-
-            </div>
-
-
-            <div class="product-grid" id="productGrid">
-
-
-                <!-- PRODUCT 1 -->
-                <article
-                    class="product-card"
-                    data-category="Mirrorless"
-                    data-name="Sony Alpha A7 IV"
-                >
-
-                    <div class="product-image">
-
-                        <span class="product-badge">
-                            NEW
-                        </span>
-
-                        <button class="wishlist-btn">
-                            ♡
-                        </button>
-
-                        <div class="camera-product-placeholder">
-                            📷
-                        </div>
-
-                    </div>
-
-                    <div class="product-info">
-
-                        <p class="product-brand">
-                            SONY
-                        </p>
-
-                        <h3>
-                            Alpha A7 IV
-                        </h3>
-
-                        <p class="product-description">
-                            Full-frame mirrorless camera
-                            untuk foto dan video profesional.
-                        </p>
-
-                        <div class="rating">
-                            ⭐ 4.9
-                            <span>(128)</span>
-                        </div>
-
-                        <div class="product-bottom">
-
-                            <div>
-                                <small>Starting from</small>
-
-                                <strong>
-                                    Rp 32.999.000
-                                </strong>
-                            </div>
-
-                            <button
-                                class="add-cart"
-                                data-name="Sony Alpha A7 IV"
-                                data-price="32999000"
-                            >
-                                +
-                            </button>
-
-                        </div>
-
-                    </div>
-
-                </article>
-
-
-                <!-- PRODUCT 2 -->
-                <article
-                    class="product-card"
-                    data-category="Mirrorless"
-                    data-name="Canon EOS R6 Mark II"
-                >
-
-                    <div class="product-image">
-
-                        <span class="product-badge best">
-                            BEST SELLER
-                        </span>
-
-                        <button class="wishlist-btn">
-                            ♡
-                        </button>
-
-                        <div class="camera-product-placeholder">
-                            📷
-                        </div>
-
-                    </div>
-
-                    <div class="product-info">
-
-                        <p class="product-brand">
-                            CANON
-                        </p>
-
-                        <h3>
-                            EOS R6 Mark II
-                        </h3>
-
-                        <p class="product-description">
-                            Kamera hybrid dengan autofocus
-                            cepat untuk foto dan video.
-                        </p>
-
-                        <div class="rating">
-                            ⭐ 4.8
-                            <span>(96)</span>
-                        </div>
-
-                        <div class="product-bottom">
-
-                            <div>
-                                <small>Starting from</small>
-
-                                <strong>
-                                    Rp 38.499.000
-                                </strong>
-                            </div>
-
-                            <button
-                                class="add-cart"
-                                data-name="Canon EOS R6 Mark II"
-                                data-price="38499000"
-                            >
-                                +
-                            </button>
-
-                        </div>
-
-                    </div>
-
-                </article>
-
-
-                <!-- PRODUCT 3 -->
-                <article
-                    class="product-card"
-                    data-category="Mirrorless"
-                    data-name="Nikon Z6 III"
-                >
-
-                    <div class="product-image">
-
-                        <span class="product-badge">
-                            NEW
-                        </span>
-
-                        <button class="wishlist-btn">
-                            ♡
-                        </button>
-
-                        <div class="camera-product-placeholder">
-                            📷
-                        </div>
-
-                    </div>
-
-                    <div class="product-info">
-
-                        <p class="product-brand">
-                            NIKON
-                        </p>
-
-                        <h3>
-                            Z6 III
-                        </h3>
-
-                        <p class="product-description">
-                            Full-frame mirrorless dengan
-                            performa tinggi.
-                        </p>
-
-                        <div class="rating">
-                            ⭐ 4.9
-                            <span>(75)</span>
-                        </div>
-
-                        <div class="product-bottom">
-
-                            <div>
-                                <small>Starting from</small>
-
-                                <strong>
-                                    Rp 39.999.000
-                                </strong>
-                            </div>
-
-                            <button
-                                class="add-cart"
-                                data-name="Nikon Z6 III"
-                                data-price="39999000"
-                            >
-                                +
-                            </button>
-
-                        </div>
-
-                    </div>
-
-                </article>
-
-
-                <!-- PRODUCT 4 -->
-                <article
-                    class="product-card"
-                    data-category="Mirrorless"
-                    data-name="Fujifilm X-T5"
-                >
-
-                    <div class="product-image">
-
-                        <span class="product-badge">
-                            POPULAR
-                        </span>
-
-                        <button class="wishlist-btn">
-                            ♡
-                        </button>
-
-                        <div class="camera-product-placeholder">
-                            📷
-                        </div>
-
-                    </div>
-
-                    <div class="product-info">
-
-                        <p class="product-brand">
-                            FUJIFILM
-                        </p>
-
-                        <h3>
-                            X-T5
-                        </h3>
-
-                        <p class="product-description">
-                            Kamera compact dengan
-                            karakter warna khas Fujifilm.
-                        </p>
-
-                        <div class="rating">
-                            ⭐ 4.9
-                            <span>(143)</span>
-                        </div>
-
-                        <div class="product-bottom">
-
-                            <div>
-                                <small>Starting from</small>
-
-                                <strong>
-                                    Rp 27.999.000
-                                </strong>
-                            </div>
-
-                            <button
-                                class="add-cart"
-                                data-name="Fujifilm X-T5"
-                                data-price="27999000"
-                            >
-                                +
-                            </button>
-
-                        </div>
-
-                    </div>
-
-                </article>
-
-
-            </div>
-
-        </section>
-
-
-        <!-- ================= PROMO ================= -->
-        <section class="promo section">
-
-            <div class="promo-content">
-
-                <p class="eyebrow">
-                    SPECIAL OFFER
-                </p>
-
-                <h2>
-                    Upgrade Your<br>
-                    Photography.
-                </h2>
-
-                <p>
-                    Dapatkan penawaran spesial untuk kamera
-                    dan perlengkapan pilihan.
-                </p>
-
-                <button id="promoBtn" class="btn-primary">
-                    Explore Deals →
-                </button>
-
-            </div>
-
-            <div class="promo-decoration">
-                ✦
-            </div>
-
-        </section>
-
-
-        <!-- ================= WHY LENSORA ================= -->
-        <section class="features section">
-
-            <div class="section-heading center">
-
-                <p class="eyebrow">
-                    WHY LENSORA
-                </p>
-
-                <h2>
-                    Shop With Confidence
-                </h2>
-
-            </div>
-
-
-            <div class="feature-grid">
-
-
-                <div class="feature-card">
-
-                    <div class="feature-icon">
-                        ✓
-                    </div>
-
-                    <h3>
-                        Original Products
-                    </h3>
-
-                    <p>
-                        Semua produk merupakan produk
-                        original dan berkualitas.
-                    </p>
-
-                </div>
-
-
-                <div class="feature-card">
-
-                    <div class="feature-icon">
-                        ★
-                    </div>
-
-                    <h3>
-                        Premium Quality
-                    </h3>
-
-                    <p>
-                        Pilihan gear terbaik untuk kebutuhan
-                        fotografi dan videografi.
-                    </p>
-
-                </div>
-
-
-                <div class="feature-card">
-
-                    <div class="feature-icon">
-                        ⚡
-                    </div>
-
-                    <h3>
-                        Fast Delivery
-                    </h3>
-
-                    <p>
-                        Pengiriman cepat dan aman sampai
-                        ke tangan customer.
-                    </p>
-
-                </div>
-
-
-                <div class="feature-card">
-
-                    <div class="feature-icon">
-                        ♡
-                    </div>
-
-                    <h3>
-                        Customer Support
-                    </h3>
-
-                    <p>
-                        Kami siap membantu kebutuhan
-                        kamera dan perlengkapanmu.
-                    </p>
-
-                </div>
-
-
-            </div>
-
-        </section>
-
-
-        <!-- ================= NEWSLETTER ================= -->
-        <section class="newsletter section">
-
-            <div>
-
-                <p class="eyebrow">
-                    STAY UPDATED
-                </p>
-
-                <h2>
-                    Get the latest gear.
-                </h2>
-
-                <p>
-                    Dapatkan info produk terbaru dan promo
-                    eksklusif dari LENSORA.
-                </p>
-
-            </div>
-
-            <form id="newsletterForm">
+            <!-- SEARCH -->
+            <div class="search-box">
 
                 <input
-                    type="email"
-                    id="emailInput"
-                    placeholder="Email kamu..."
-                    required
+                    type="text"
+                    id="searchInput"
+                    placeholder="Cari kamera..."
                 >
 
-                <button type="submit">
-                    Subscribe
+                <button id="searchBtn">
+                    🔍
+                </button>
+
+            </div>
+
+            <!-- NAVIGATION -->
+            <nav>
+
+                <button id="locationBtn" class="nav-btn">
+                    📍 Lokasi
+                </button>
+
+                <button id="cartBtn" class="nav-btn">
+                    🛒
+                    <span id="cartCount">0</span>
+                </button>
+
+                <button id="accountBtn" class="nav-btn">
+                    👤 Akun
+                </button>
+
+            </nav>
+
+        </header>
+
+
+        <!-- HERO -->
+        <main>
+
+            <section class="hero">
+
+                <div class="hero-text">
+
+                    <span class="badge">
+                        CAMERA STORE
+                    </span>
+
+                    <h1>
+                        Capture Your
+                        <span>Best Moment.</span>
+                    </h1>
+
+                    <p>
+                        Temukan kamera terbaik untuk kebutuhan
+                        fotografi dan videografi kamu.
+                    </p>
+
+                    <button id="shopNowBtn" class="main-btn">
+                        Belanja Sekarang →
+                    </button>
+
+                </div>
+
+                <div class="hero-image">
+
+                    <!-- Ganti dengan gambar kamera kamu -->
+                    <img
+                        src="images/camera-hero.png"
+                        alt="Camera"
+                    >
+
+                </div>
+
+            </section>
+
+
+            <!-- KATEGORI -->
+            <section class="category-section">
+
+                <div class="section-title">
+
+                    <div>
+                        <span>KATEGORI</span>
+                        <h2>Pilih Sesuai Kebutuhan</h2>
+                    </div>
+
+                </div>
+
+                <div class="category-list">
+
+                    <button
+                        class="category-btn"
+                        data-category="all"
+                    >
+                        📷 Semua
+                    </button>
+
+                    <button
+                        class="category-btn"
+                        data-category="camera"
+                    >
+                        📸 Camera
+                    </button>
+
+                    <button
+                        class="category-btn"
+                        data-category="lens"
+                    >
+                        🔭 Lens
+                    </button>
+
+                    <button
+                        class="category-btn"
+                        data-category="accessories"
+                    >
+                        🎒 Accessories
+                    </button>
+
+                </div>
+
+            </section>
+
+
+            <!-- PRODUK -->
+            <section class="product-section">
+
+                <div class="section-title">
+
+                    <div>
+                        <span>PRODUK</span>
+                        <h2>Kamera Pilihan</h2>
+                    </div>
+
+                    <button id="viewAllBtn">
+                        Lihat Semua →
+                    </button>
+
+                </div>
+
+
+                <div id="productContainer" class="product-grid">
+
+                    <!-- PRODUK 1 -->
+                    <article
+                        class="product-card"
+                        data-category="camera"
+                        data-name="Sony Alpha Camera"
+                    >
+
+                        <div class="product-image">
+
+                            <span class="product-label">
+                                BEST SELLER
+                            </span>
+
+                            <img
+                                src="images/camera1.png"
+                                alt="Sony Alpha Camera"
+                            >
+
+                        </div>
+
+                        <div class="product-info">
+
+                            <small>CAMERA</small>
+
+                            <h3>Sony Alpha Camera</h3>
+
+                            <p class="price">
+                                Rp 12.500.000
+                            </p>
+
+                            <div class="product-actions">
+
+                                <button
+                                    class="add-cart-btn"
+                                    data-product="Sony Alpha Camera"
+                                    data-price="12500000"
+                                >
+                                    + Keranjang
+                                </button>
+
+                                <button
+                                    class="buy-btn"
+                                    data-product="Sony Alpha Camera"
+                                >
+                                    Beli
+                                </button>
+
+                            </div>
+
+                        </div>
+
+                    </article>
+
+
+                    <!-- PRODUK 2 -->
+                    <article
+                        class="product-card"
+                        data-category="camera"
+                        data-name="Canon EOS Camera"
+                    >
+
+                        <div class="product-image">
+
+                            <img
+                                src="images/camera2.png"
+                                alt="Canon EOS Camera"
+                            >
+
+                        </div>
+
+                        <div class="product-info">
+
+                            <small>CAMERA</small>
+
+                            <h3>Canon EOS Camera</h3>
+
+                            <p class="price">
+                                Rp 10.999.000
+                            </p>
+
+                            <div class="product-actions">
+
+                                <button
+                                    class="add-cart-btn"
+                                    data-product="Canon EOS Camera"
+                                    data-price="10999000"
+                                >
+                                    + Keranjang
+                                </button>
+
+                                <button
+                                    class="buy-btn"
+                                    data-product="Canon EOS Camera"
+                                >
+                                    Beli
+                                </button>
+
+                            </div>
+
+                        </div>
+
+                    </article>
+
+
+                    <!-- PRODUK 3 -->
+                    <article
+                        class="product-card"
+                        data-category="camera"
+                        data-name="Fujifilm X Camera"
+                    >
+
+                        <div class="product-image">
+
+                            <span class="product-label">
+                                NEW
+                            </span>
+
+                            <img
+                                src="images/camera3.png"
+                                alt="Fujifilm X Camera"
+                            >
+
+                        </div>
+
+                        <div class="product-info">
+
+                            <small>CAMERA</small>
+
+                            <h3>Fujifilm X Camera</h3>
+
+                            <p class="price">
+                                Rp 14.250.000
+                            </p>
+
+                            <div class="product-actions">
+
+                                <button
+                                    class="add-cart-btn"
+                                    data-product="Fujifilm X Camera"
+                                    data-price="14250000"
+                                >
+                                    + Keranjang
+                                </button>
+
+                                <button
+                                    class="buy-btn"
+                                    data-product="Fujifilm X Camera"
+                                >
+                                    Beli
+                                </button>
+
+                            </div>
+
+                        </div>
+
+                    </article>
+
+
+                    <!-- PRODUK 4 -->
+                    <article
+                        class="product-card"
+                        data-category="lens"
+                        data-name="Camera Lens 50mm"
+                    >
+
+                        <div class="product-image">
+
+                            <img
+                                src="images/lens1.png"
+                                alt="Camera Lens"
+                            >
+
+                        </div>
+
+                        <div class="product-info">
+
+                            <small>LENS</small>
+
+                            <h3>Camera Lens 50mm</h3>
+
+                            <p class="price">
+                                Rp 5.500.000
+                            </p>
+
+                            <div class="product-actions">
+
+                                <button
+                                    class="add-cart-btn"
+                                    data-product="Camera Lens 50mm"
+                                    data-price="5500000"
+                                >
+                                    + Keranjang
+                                </button>
+
+                                <button
+                                    class="buy-btn"
+                                    data-product="Camera Lens 50mm"
+                                >
+                                    Beli
+                                </button>
+
+                            </div>
+
+                        </div>
+
+                    </article>
+
+                </div>
+
+            </section>
+
+        </main>
+
+    </section>
+
+
+    <!-- =========================
+         MODAL LOGIN CUSTOMER
+    ========================== -->
+    <div id="customerLoginModal" class="modal">
+
+        <div class="modal-box">
+
+            <button
+                class="close-modal"
+                id="closeCustomerLogin"
+            >
+                ×
+            </button>
+
+            <h2>Login Customer</h2>
+
+            <p>
+                Login dulu untuk melanjutkan pembelian.
+            </p>
+
+            <form id="customerLoginForm">
+
+                <div class="input-group">
+
+                    <label>Email</label>
+
+                    <input
+                        type="email"
+                        id="customerEmail"
+                        placeholder="nama@email.com"
+                        required
+                    >
+
+                </div>
+
+                <div class="input-group">
+
+                    <label>Password</label>
+
+                    <input
+                        type="password"
+                        id="customerPassword"
+                        placeholder="Masukkan password"
+                        required
+                    >
+
+                </div>
+
+                <button
+                    type="submit"
+                    class="main-btn"
+                >
+                    Login & Lanjutkan
                 </button>
 
             </form>
 
-        </section>
+            <p id="customerLoginMessage" class="message"></p>
+
+        </div>
+
+    </div>
 
 
-        <!-- ================= ABOUT ================= -->
-        <section class="about section" id="about">
+    <!-- =========================
+         MODAL KERANJANG
+    ========================== -->
+    <div id="cartModal" class="modal">
 
-            <div class="about-title">
+        <div class="modal-box cart-box">
 
-                <p class="eyebrow">
-                    ABOUT LENSORA
+            <button
+                class="close-modal"
+                id="closeCart"
+            >
+                ×
+            </button>
+
+            <h2>🛒 Keranjang Saya</h2>
+
+            <div id="cartItems">
+
+                <p class="empty-cart">
+                    Keranjang masih kosong.
                 </p>
 
-                <h2>
-                    Capture.<br>
-                    Create.<br>
-                    <span>Inspire.</span>
+            </div>
+
+            <div class="cart-total">
+
+                <span>Total</span>
+
+                <strong id="cartTotal">
+                    Rp 0
+                </strong>
+
+            </div>
+
+            <button
+                id="checkoutBtn"
+                class="main-btn"
+            >
+                Checkout →
+            </button>
+
+        </div>
+
+    </div>
+
+
+    <!-- =========================
+         MODAL LOKASI
+    ========================== -->
+    <div id="locationModal" class="modal">
+
+        <div class="modal-box">
+
+            <button
+                class="close-modal"
+                id="closeLocation"
+            >
+                ×
+            </button>
+
+            <h2>📍 Lokasi Pengiriman</h2>
+
+            <p>
+                Pilih lokasi untuk pengiriman barang.
+            </p>
+
+            <div class="location-option">
+
+                <button
+                    class="location-choice"
+                    data-location="Jakarta"
+                >
+                    📍 Jakarta
+                </button>
+
+                <button
+                    class="location-choice"
+                    data-location="Bandung"
+                >
+                    📍 Bandung
+                </button>
+
+                <button
+                    class="location-choice"
+                    data-location="Surabaya"
+                >
+                    📍 Surabaya
+                </button>
+
+                <button
+                    class="location-choice"
+                    data-location="Yogyakarta"
+                >
+                    📍 Yogyakarta
+                </button>
+
+            </div>
+
+            <p id="selectedLocation">
+                Belum memilih lokasi.
+            </p>
+
+        </div>
+
+    </div>
+
+
+    <!-- =========================
+         MODAL AKUN
+    ========================== -->
+    <div id="accountModal" class="modal">
+
+        <div class="modal-box">
+
+            <button
+                class="close-modal"
+                id="closeAccount"
+            >
+                ×
+            </button>
+
+            <div id="accountNotLogin">
+
+                <div class="account-icon">
+                    👤
+                </div>
+
+                <h2>Akun Customer</h2>
+
+                <p>
+                    Kamu belum login.
+                </p>
+
+                <button
+                    id="accountLoginBtn"
+                    class="main-btn"
+                >
+                    Login Customer
+                </button>
+
+            </div>
+
+
+            <div id="accountLoggedIn" style="display:none;">
+
+                <div class="account-icon">
+                    👤
+                </div>
+
+                <h2 id="customerName">
+                    Customer
                 </h2>
 
-            </div>
-
-            <div class="about-text">
-
-                <p>
-                    LENSORA adalah konsep toko kamera premium
-                    yang menyediakan berbagai pilihan kamera,
-                    lensa, dan aksesoris untuk fotografer,
-                    content creator, dan videographer.
+                <p id="customerEmailDisplay">
+                    customer@email.com
                 </p>
 
-                <p>
-                    Website ini dibuat sebagai project simulasi
-                    e-commerce dengan pengalaman belanja
-                    modern dan interaktif.
-                </p>
+                <button
+                    id="customerLogoutBtn"
+                    class="logout-btn"
+                >
+                    Logout
+                </button>
 
             </div>
 
-        </section>
+        </div>
+
+    </div>
 
 
-    </main>
+    <!-- =========================
+         HALAMAN CHECKOUT
+    ========================== -->
+    <section id="checkoutPage" class="page">
+
+        <header class="navbar">
+
+            <div class="logo">
+                LENS<span>WEB</span>
+            </div>
+
+            <button
+                id="backHomeFromCheckout"
+                class="nav-btn"
+            >
+                ← Kembali
+            </button>
+
+        </header>
 
 
-    <!-- ================= FOOTER ================= -->
-    <footer>
+        <main class="checkout-container">
 
-        <div class="footer-main">
+            <h1>Checkout</h1>
 
-            <div class="footer-brand">
+            <div class="checkout-grid">
 
-                <a href="#" class="logo">
-                    LENS<span>ORA</span>
-                </a>
 
-                <p>
-                    Premium camera store for
-                    creators and photographers.
-                </p>
+                <!-- ALAMAT -->
+                <div class="checkout-card">
+
+                    <h2>📍 Alamat Pengiriman</h2>
+
+                    <div class="input-group">
+
+                        <label>Nama Penerima</label>
+
+                        <input
+                            type="text"
+                            id="receiverName"
+                            placeholder="Nama penerima"
+                        >
+
+                    </div>
+
+                    <div class="input-group">
+
+                        <label>Nomor Telepon</label>
+
+                        <input
+                            type="text"
+                            id="receiverPhone"
+                            placeholder="08xxxxxxxxxx"
+                        >
+
+                    </div>
+
+                    <div class="input-group">
+
+                        <label>Alamat Lengkap</label>
+
+                        <textarea
+                            id="receiverAddress"
+                            placeholder="Masukkan alamat lengkap"
+                        ></textarea>
+
+                    </div>
+
+                </div>
+
+
+                <!-- PAYMENT -->
+                <div class="checkout-card">
+
+                    <h2>💳 Metode Pembayaran</h2>
+
+                    <div class="payment-list">
+
+                        <button
+                            class="payment-option"
+                            data-payment="Transfer Bank"
+                        >
+                            🏦
+                            <span>
+                                <strong>Transfer Bank</strong>
+                                <small>Simulasi pembayaran</small>
+                            </span>
+                        </button>
+
+                        <button
+                            class="payment-option"
+                            data-payment="E-Wallet"
+                        >
+                            📱
+                            <span>
+                                <strong>E-Wallet</strong>
+                                <small>Simulasi pembayaran</small>
+                            </span>
+                        </button>
+
+                        <button
+                            class="payment-option"
+                            data-payment="COD"
+                        >
+                            💵
+                            <span>
+                                <strong>COD</strong>
+                                <small>Bayar di tempat</small>
+                            </span>
+                        </button>
+
+                    </div>
+
+                    <p id="selectedPayment">
+                        Belum memilih pembayaran.
+                    </p>
+
+                </div>
+
+
+                <!-- RINGKASAN -->
+                <div class="checkout-card order-summary">
+
+                    <h2>🧾 Ringkasan Pesanan</h2>
+
+                    <div id="checkoutItems">
+                        <!-- JS akan memasukkan produk -->
+                    </div>
+
+                    <div class="summary-row">
+
+                        <span>Subtotal</span>
+
+                        <strong id="checkoutSubtotal">
+                            Rp 0
+                        </strong>
+
+                    </div>
+
+                    <div class="summary-row">
+
+                        <span>Ongkir</span>
+
+                        <strong>
+                            Rp 20.000
+                        </strong>
+
+                    </div>
+
+                    <hr>
+
+                    <div class="summary-row total">
+
+                        <span>Total</span>
+
+                        <strong id="checkoutTotal">
+                            Rp 20.000
+                        </strong>
+
+                    </div>
+
+                    <button
+                        id="payBtn"
+                        class="main-btn"
+                    >
+                        Bayar Sekarang
+                    </button>
+
+                    <p class="payment-note">
+                        *Pembayaran hanya simulasi untuk kebutuhan ujikom.
+                    </p>
+
+                </div>
+
+            </div>
+
+        </main>
+
+    </section>
+
+
+    <!-- =========================
+         HALAMAN ADMIN
+    ========================== -->
+    <section id="adminPage" class="page">
+
+        <header class="admin-navbar">
+
+            <div class="logo">
+                LENS<span>WEB</span>
+            </div>
+
+            <div>
+
+                <span>
+                    🛠️ Admin Panel
+                </span>
+
+                <button
+                    id="adminLogoutBtn"
+                    class="logout-btn"
+                >
+                    Logout
+                </button>
+
+            </div>
+
+        </header>
+
+
+        <main class="admin-container">
+
+            <div class="admin-heading">
+
+                <div>
+                    <span>ADMIN DASHBOARD</span>
+
+                    <h1>
+                        Kelola Toko
+                    </h1>
+                </div>
+
+                <button
+                    id="addProductBtn"
+                    class="main-btn"
+                >
+                    + Tambah Produk
+                </button>
 
             </div>
 
 
-            <div class="footer-column">
+            <!-- STATISTIK -->
+            <div class="admin-stats">
 
-         
+                <div class="stat-card">
+
+                    <span>📦</span>
+
+                    <div>
+                        <small>Total Produk</small>
+
+                        <strong id="totalProducts">
+                            4
+                        </strong>
+                    </div>
+
+                </div>
+
+                <div class="stat-card">
+
+                    <span>🛒</span>
+
+                    <div>
+                        <small>Total Pesanan</small>
+
+                        <strong id="totalOrders">
+                            0
+                        </strong>
+                    </div>
+
+                </div>
+
+                <div class="stat-card">
+
+                    <span>👥</span>
+
+                    <div>
+                        <small>Customer</small>
+
+                        <strong id="totalCustomers">
+                            0
+                        </strong>
+                    </div>
+
+                </div>
+
+                <div class="stat-card">
+
+                    <span>💰</span>
+
+                    <div>
+                        <small>Penjualan</small>
+
+                        <strong id="totalSales">
+                            Rp 0
+                        </strong>
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <!-- KELOLA PRODUK -->
+            <div class="admin-card">
+
+                <div class="section-title">
+
+                    <div>
+                        <span>INVENTORY</span>
+
+                        <h2>
+                            Produk
+                        </h2>
+                    </div>
+
+                    <input
+                        type="text"
+                        id="adminProductSearch"
+                        placeholder="Cari produk..."
+                    >
+
+                </div>
+
+
+                <div class="admin-table-wrapper">
+
+                    <table>
+
+                        <thead>
+
+                            <tr>
+
+                                <th>Produk</th>
+                                <th>Kategori</th>
+                                <th>Harga</th>
+                                <th>Stok</th>
+                                <th>Status</th>
+                                <th>Aksi</th>
+
+                            </tr>
+
+                        </thead>
+
+                        <tbody id="adminProductTable">
+
+                            <tr>
+
+                                <td>
+                                    Sony Alpha Camera
+                                </td>
+
+                                <td>
+                                    Camera
+                                </td>
+
+                                <td>
+                                    Rp 12.500.000
+                                </td>
+
+                                <td>
+                                    10
+                                </td>
+
+                                <td>
+                                    <span class="status-active">
+                                        Aktif
+                                    </span>
+                                </td>
+
+                                <td>
+
+                                    <button
+                                        class="edit-product-btn"
+                                    >
+                                        Edit
+                                    </button>
+
+                                    <button
+                                        class="delete-product-btn"
+                                    >
+                                        Hapus
+                                    </button>
+
+                                </td>
+
+                            </tr>
+
+                            <tr>
+
+                                <td>
+                                    Canon EOS Camera
+                                </td>
+
+                                <td>
+                                    Camera
+                                </td>
+
+                                <td>
+                                    Rp 10.999.000
+                                </td>
+
+                                <td>
+                                    8
+                                </td>
+
+                                <td>
+                                    <span class="status-active">
+                                        Aktif
+                                    </span>
+                                </td>
+
+                                <td>
+
+                                    <button
+                                        class="edit-product-btn"
+                                    >
+                                        Edit
+                                    </button>
+
+                                    <button
+                                        class="delete-product-btn"
+                                    >
+                                        Hapus
+                                    </button>
+
+                                </td>
+
+                            </tr>
+
+                        </tbody>
+
+                    </table>
+
+                </div>
+
+            </div>
+
+        </main>
+
+    </section>
+
+
+    <!-- =========================
+         NOTIFICATION
+    ========================== -->
+    <div id="notification" class="notification">
+
+        <span id="notificationText">
+            Produk ditambahkan!
+        </span>
+
+    </div>
+
+
+    <!-- =========================
+         JAVASCRIPT
+    ========================== -->
+
+    <script src="script.js"></script>
+
+</body>
+</html>
