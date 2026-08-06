@@ -4,135 +4,798 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>LensHub - Toko Kamera</title>
+    <title>LENSORA | Premium Camera Store</title>
 
     <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
 
-    <header>
-        <div class="logo">Lens<span>Hub</span></div>
+    <!-- ================= NAVBAR ================= -->
+    <header class="navbar">
 
-        <nav>
+        <a href="#" class="logo">
+            LENS<span>ORA</span>
+        </a>
+
+        <nav class="nav-menu">
             <a href="#home">Home</a>
-            <a href="#produk">Produk</a>
-            <a href="#tentang">Tentang</a>
+            <a href="#products">Camera</a>
+            <a href="#categories">Categories</a>
+            <a href="#about">About</a>
         </nav>
 
-        <button class="cart-btn" onclick="lihatKeranjang()">
-            🛒 <span id="cartCount">0</span>
-        </button>
+        <div class="nav-actions">
+
+            <button class="icon-btn" id="searchBtn" title="Search">
+                🔍
+            </button>
+
+            <button class="icon-btn" id="wishlistBtn" title="Wishlist">
+                ♡
+            </button>
+
+            <button class="cart-btn" id="cartBtn">
+                🛒
+                <span id="cartCount">0</span>
+            </button>
+
+            <button class="login-btn" id="loginBtn">
+                Login
+            </button>
+
+        </div>
+
     </header>
 
+
+    <!-- ================= SEARCH BOX ================= -->
+    <div class="search-box" id="searchBox">
+
+        <input
+            type="text"
+            id="searchInput"
+            placeholder="Cari kamera, lensa, atau brand..."
+        >
+
+        <button id="closeSearch">
+            ✕
+        </button>
+
+    </div>
+
+
+    <!-- ================= MAIN ================= -->
     <main>
 
-        <section id="home" class="hero">
-            <div>
-                <p class="small-title">PREMIUM CAMERA STORE</p>
 
-                <h1>
-                    Abadikan Setiap
-                    <span>Momen.</span>
-                </h1>
+        <!-- ================= HERO ================= -->
+        <section class="hero" id="home">
 
-                <p>
-                    Temukan kamera berkualitas untuk kebutuhan
-                    fotografi dan videografi kamu.
+            <div class="hero-content">
+
+                <p class="eyebrow">
+                    PREMIUM CAMERA STORE
                 </p>
 
-                <a href="#produk" class="btn">Lihat Produk</a>
-            </div>
+                <h1>
+                    Capture Your
+                    <span>Best Moment.</span>
+                </h1>
 
-            <div class="hero-camera">
-                📷
-            </div>
-        </section>
+                <p class="hero-description">
+                    Temukan kamera premium pilihan untuk fotografi,
+                    videografi, content creation, dan perjalananmu.
+                </p>
 
+                <div class="hero-buttons">
 
-        <section id="produk" class="products">
+                    <a href="#products" class="btn-primary">
+                        Explore Cameras →
+                    </a>
 
-            <p class="small-title">KOLEKSI KAMI</p>
+                    <a href="#categories" class="btn-outline">
+                        Browse Categories
+                    </a>
 
-            <h2>Kamera Pilihan</h2>
-
-            <div class="product-grid">
-
-                <div class="product-card">
-                    <div class="product-image">📷</div>
-
-                    <h3>Canon EOS R50</h3>
-
-                    <p class="description">
-                        Kamera mirrorless ringan untuk foto dan video.
-                    </p>
-
-                    <strong>Rp 10.500.000</strong>
-
-                    <button onclick="tambahKeranjang('Canon EOS R50')">
-                        Tambah ke Keranjang
-                    </button>
                 </div>
 
+                <div class="hero-info">
 
-                <div class="product-card">
-                    <div class="product-image">📸</div>
+                    <div>
+                        <strong>100+</strong>
+                        <span>Products</span>
+                    </div>
 
-                    <h3>Sony Alpha A6400</h3>
+                    <div>
+                        <strong>20+</strong>
+                        <span>Brands</span>
+                    </div>
 
-                    <p class="description">
-                        Kamera compact dengan autofocus cepat.
-                    </p>
+                    <div>
+                        <strong>4.9/5</strong>
+                        <span>Rating</span>
+                    </div>
 
-                    <strong>Rp 12.000.000</strong>
-
-                    <button onclick="tambahKeranjang('Sony Alpha A6400')">
-                        Tambah ke Keranjang
-                    </button>
-                </div>
-
-
-                <div class="product-card">
-                    <div class="product-image">📷</div>
-
-                    <h3>Fujifilm X-S20</h3>
-
-                    <p class="description">
-                        Cocok untuk fotografi dan content creator.
-                    </p>
-
-                    <strong>Rp 16.000.000</strong>
-
-                    <button onclick="tambahKeranjang('Fujifilm X-S20')">
-                        Tambah ke Keranjang
-                    </button>
                 </div>
 
             </div>
 
+
+            <div class="hero-visual">
+
+                <div class="gold-circle"></div>
+
+                <div class="hero-camera-card">
+
+                    <span class="hero-badge">
+                        NEW ARRIVAL
+                    </span>
+
+                    <div class="camera-placeholder">
+                        📷
+                    </div>
+
+                    <div class="hero-product-info">
+
+                        <div>
+                            <small>SONY</small>
+                            <h3>Alpha A7 IV</h3>
+                        </div>
+
+                        <strong>
+                            Rp 32.999.000
+                        </strong>
+
+                    </div>
+
+                </div>
+
+            </div>
+
         </section>
 
 
-        <section id="tentang" class="about">
+        <!-- ================= BRAND BAR ================= -->
+        <section class="brand-bar">
 
-            <h2>Tentang LensHub</h2>
+            <p>TRUSTED BRANDS</p>
 
-            <p>
-                LensHub adalah website toko kamera sederhana
-                untuk kebutuhan fotografi dan videografi.
-            </p>
+            <div class="brand-list">
+
+                <span>SONY</span>
+                <span>CANON</span>
+                <span>NIKON</span>
+                <span>FUJIFILM</span>
+                <span>LEICA</span>
+
+            </div>
 
         </section>
+
+
+        <!-- ================= CATEGORIES ================= -->
+        <section class="categories section" id="categories">
+
+            <div class="section-heading">
+
+                <div>
+                    <p class="eyebrow">
+                        SHOP BY CATEGORY
+                    </p>
+
+                    <h2>
+                        Find Your Gear
+                    </h2>
+                </div>
+
+                <a href="#products">
+                    View All →
+                </a>
+
+            </div>
+
+
+            <div class="category-grid">
+
+
+                <button class="category-card" data-category="Mirrorless">
+
+                    <div class="category-icon">
+                        📷
+                    </div>
+
+                    <div>
+                        <h3>Mirrorless</h3>
+                        <p>Modern & lightweight</p>
+                    </div>
+
+                    <span>→</span>
+
+                </button>
+
+
+                <button class="category-card" data-category="DSLR">
+
+                    <div class="category-icon">
+                        📸
+                    </div>
+
+                    <div>
+                        <h3>DSLR</h3>
+                        <p>Professional camera</p>
+                    </div>
+
+                    <span>→</span>
+
+                </button>
+
+
+                <button class="category-card" data-category="Lens">
+
+                    <div class="category-icon">
+                        🔭
+                    </div>
+
+                    <div>
+                        <h3>Lenses</h3>
+                        <p>Sharp & detailed</p>
+                    </div>
+
+                    <span>→</span>
+
+                </button>
+
+
+                <button class="category-card" data-category="Accessories">
+
+                    <div class="category-icon">
+                        🎒
+                    </div>
+
+                    <div>
+                        <h3>Accessories</h3>
+                        <p>Complete your setup</p>
+                    </div>
+
+                    <span>→</span>
+
+                </button>
+
+            </div>
+
+        </section>
+
+
+        <!-- ================= PRODUCTS ================= -->
+        <section class="products section" id="products">
+
+            <div class="section-heading">
+
+                <div>
+
+                    <p class="eyebrow">
+                        OUR COLLECTION
+                    </p>
+
+                    <h2>
+                        Featured Cameras
+                    </h2>
+
+                </div>
+
+                <button class="view-all-btn" id="viewAllBtn">
+                    View All →
+                </button>
+
+            </div>
+
+
+            <div class="product-grid" id="productGrid">
+
+
+                <!-- PRODUCT 1 -->
+                <article
+                    class="product-card"
+                    data-category="Mirrorless"
+                    data-name="Sony Alpha A7 IV"
+                >
+
+                    <div class="product-image">
+
+                        <span class="product-badge">
+                            NEW
+                        </span>
+
+                        <button class="wishlist-btn">
+                            ♡
+                        </button>
+
+                        <div class="camera-product-placeholder">
+                            📷
+                        </div>
+
+                    </div>
+
+                    <div class="product-info">
+
+                        <p class="product-brand">
+                            SONY
+                        </p>
+
+                        <h3>
+                            Alpha A7 IV
+                        </h3>
+
+                        <p class="product-description">
+                            Full-frame mirrorless camera
+                            untuk foto dan video profesional.
+                        </p>
+
+                        <div class="rating">
+                            ⭐ 4.9
+                            <span>(128)</span>
+                        </div>
+
+                        <div class="product-bottom">
+
+                            <div>
+                                <small>Starting from</small>
+
+                                <strong>
+                                    Rp 32.999.000
+                                </strong>
+                            </div>
+
+                            <button
+                                class="add-cart"
+                                data-name="Sony Alpha A7 IV"
+                                data-price="32999000"
+                            >
+                                +
+                            </button>
+
+                        </div>
+
+                    </div>
+
+                </article>
+
+
+                <!-- PRODUCT 2 -->
+                <article
+                    class="product-card"
+                    data-category="Mirrorless"
+                    data-name="Canon EOS R6 Mark II"
+                >
+
+                    <div class="product-image">
+
+                        <span class="product-badge best">
+                            BEST SELLER
+                        </span>
+
+                        <button class="wishlist-btn">
+                            ♡
+                        </button>
+
+                        <div class="camera-product-placeholder">
+                            📷
+                        </div>
+
+                    </div>
+
+                    <div class="product-info">
+
+                        <p class="product-brand">
+                            CANON
+                        </p>
+
+                        <h3>
+                            EOS R6 Mark II
+                        </h3>
+
+                        <p class="product-description">
+                            Kamera hybrid dengan autofocus
+                            cepat untuk foto dan video.
+                        </p>
+
+                        <div class="rating">
+                            ⭐ 4.8
+                            <span>(96)</span>
+                        </div>
+
+                        <div class="product-bottom">
+
+                            <div>
+                                <small>Starting from</small>
+
+                                <strong>
+                                    Rp 38.499.000
+                                </strong>
+                            </div>
+
+                            <button
+                                class="add-cart"
+                                data-name="Canon EOS R6 Mark II"
+                                data-price="38499000"
+                            >
+                                +
+                            </button>
+
+                        </div>
+
+                    </div>
+
+                </article>
+
+
+                <!-- PRODUCT 3 -->
+                <article
+                    class="product-card"
+                    data-category="Mirrorless"
+                    data-name="Nikon Z6 III"
+                >
+
+                    <div class="product-image">
+
+                        <span class="product-badge">
+                            NEW
+                        </span>
+
+                        <button class="wishlist-btn">
+                            ♡
+                        </button>
+
+                        <div class="camera-product-placeholder">
+                            📷
+                        </div>
+
+                    </div>
+
+                    <div class="product-info">
+
+                        <p class="product-brand">
+                            NIKON
+                        </p>
+
+                        <h3>
+                            Z6 III
+                        </h3>
+
+                        <p class="product-description">
+                            Full-frame mirrorless dengan
+                            performa tinggi.
+                        </p>
+
+                        <div class="rating">
+                            ⭐ 4.9
+                            <span>(75)</span>
+                        </div>
+
+                        <div class="product-bottom">
+
+                            <div>
+                                <small>Starting from</small>
+
+                                <strong>
+                                    Rp 39.999.000
+                                </strong>
+                            </div>
+
+                            <button
+                                class="add-cart"
+                                data-name="Nikon Z6 III"
+                                data-price="39999000"
+                            >
+                                +
+                            </button>
+
+                        </div>
+
+                    </div>
+
+                </article>
+
+
+                <!-- PRODUCT 4 -->
+                <article
+                    class="product-card"
+                    data-category="Mirrorless"
+                    data-name="Fujifilm X-T5"
+                >
+
+                    <div class="product-image">
+
+                        <span class="product-badge">
+                            POPULAR
+                        </span>
+
+                        <button class="wishlist-btn">
+                            ♡
+                        </button>
+
+                        <div class="camera-product-placeholder">
+                            📷
+                        </div>
+
+                    </div>
+
+                    <div class="product-info">
+
+                        <p class="product-brand">
+                            FUJIFILM
+                        </p>
+
+                        <h3>
+                            X-T5
+                        </h3>
+
+                        <p class="product-description">
+                            Kamera compact dengan
+                            karakter warna khas Fujifilm.
+                        </p>
+
+                        <div class="rating">
+                            ⭐ 4.9
+                            <span>(143)</span>
+                        </div>
+
+                        <div class="product-bottom">
+
+                            <div>
+                                <small>Starting from</small>
+
+                                <strong>
+                                    Rp 27.999.000
+                                </strong>
+                            </div>
+
+                            <button
+                                class="add-cart"
+                                data-name="Fujifilm X-T5"
+                                data-price="27999000"
+                            >
+                                +
+                            </button>
+
+                        </div>
+
+                    </div>
+
+                </article>
+
+
+            </div>
+
+        </section>
+
+
+        <!-- ================= PROMO ================= -->
+        <section class="promo section">
+
+            <div class="promo-content">
+
+                <p class="eyebrow">
+                    SPECIAL OFFER
+                </p>
+
+                <h2>
+                    Upgrade Your<br>
+                    Photography.
+                </h2>
+
+                <p>
+                    Dapatkan penawaran spesial untuk kamera
+                    dan perlengkapan pilihan.
+                </p>
+
+                <button id="promoBtn" class="btn-primary">
+                    Explore Deals →
+                </button>
+
+            </div>
+
+            <div class="promo-decoration">
+                ✦
+            </div>
+
+        </section>
+
+
+        <!-- ================= WHY LENSORA ================= -->
+        <section class="features section">
+
+            <div class="section-heading center">
+
+                <p class="eyebrow">
+                    WHY LENSORA
+                </p>
+
+                <h2>
+                    Shop With Confidence
+                </h2>
+
+            </div>
+
+
+            <div class="feature-grid">
+
+
+                <div class="feature-card">
+
+                    <div class="feature-icon">
+                        ✓
+                    </div>
+
+                    <h3>
+                        Original Products
+                    </h3>
+
+                    <p>
+                        Semua produk merupakan produk
+                        original dan berkualitas.
+                    </p>
+
+                </div>
+
+
+                <div class="feature-card">
+
+                    <div class="feature-icon">
+                        ★
+                    </div>
+
+                    <h3>
+                        Premium Quality
+                    </h3>
+
+                    <p>
+                        Pilihan gear terbaik untuk kebutuhan
+                        fotografi dan videografi.
+                    </p>
+
+                </div>
+
+
+                <div class="feature-card">
+
+                    <div class="feature-icon">
+                        ⚡
+                    </div>
+
+                    <h3>
+                        Fast Delivery
+                    </h3>
+
+                    <p>
+                        Pengiriman cepat dan aman sampai
+                        ke tangan customer.
+                    </p>
+
+                </div>
+
+
+                <div class="feature-card">
+
+                    <div class="feature-icon">
+                        ♡
+                    </div>
+
+                    <h3>
+                        Customer Support
+                    </h3>
+
+                    <p>
+                        Kami siap membantu kebutuhan
+                        kamera dan perlengkapanmu.
+                    </p>
+
+                </div>
+
+
+            </div>
+
+        </section>
+
+
+        <!-- ================= NEWSLETTER ================= -->
+        <section class="newsletter section">
+
+            <div>
+
+                <p class="eyebrow">
+                    STAY UPDATED
+                </p>
+
+                <h2>
+                    Get the latest gear.
+                </h2>
+
+                <p>
+                    Dapatkan info produk terbaru dan promo
+                    eksklusif dari LENSORA.
+                </p>
+
+            </div>
+
+            <form id="newsletterForm">
+
+                <input
+                    type="email"
+                    id="emailInput"
+                    placeholder="Email kamu..."
+                    required
+                >
+
+                <button type="submit">
+                    Subscribe
+                </button>
+
+            </form>
+
+        </section>
+
+
+        <!-- ================= ABOUT ================= -->
+        <section class="about section" id="about">
+
+            <div class="about-title">
+
+                <p class="eyebrow">
+                    ABOUT LENSORA
+                </p>
+
+                <h2>
+                    Capture.<br>
+                    Create.<br>
+                    <span>Inspire.</span>
+                </h2>
+
+            </div>
+
+            <div class="about-text">
+
+                <p>
+                    LENSORA adalah konsep toko kamera premium
+                    yang menyediakan berbagai pilihan kamera,
+                    lensa, dan aksesoris untuk fotografer,
+                    content creator, dan videographer.
+                </p>
+
+                <p>
+                    Website ini dibuat sebagai project simulasi
+                    e-commerce dengan pengalaman belanja
+                    modern dan interaktif.
+                </p>
+
+            </div>
+
+        </section>
+
 
     </main>
 
 
+    <!-- ================= FOOTER ================= -->
     <footer>
-        <p>© 2026 LensHub. Uji Kompetensi Keahlian.</p>
-    </footer>
+
+        <div class="footer-main">
+
+            <div class="footer-brand">
+
+                <a href="#" class="logo">
+                    LENS<span>ORA</span>
+                </a>
+
+                <p>
+                    Premium camera store for
+                    creators and photographers.
+                </p>
+
+            </div>
 
 
-    <script src="script.js"></script>
+            <div class="footer-column">
 
-</body>
-</html>
+         
